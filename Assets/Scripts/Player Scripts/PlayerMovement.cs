@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private Animator anim;
     private SpriteRenderer sprite;
+    int grav;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        grav = 1;
     }
 
     // Update is called once per frame
@@ -38,7 +40,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
+            if (grav == -1)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpFloat * -1);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
+            }
+            
+        }
+
+        if (Input.GetKeyDown("z"))
+        {
+            rb.gravityScale = rb.gravityScale * -1;
+            grav *= -1;
         }
 
         UpdateAnimationState();
@@ -72,6 +88,15 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.falling;
         }
 
+        if (grav == -1)
+        {
+            sprite.flipY = true;
+        }
+        else
+        {
+            sprite.flipY = false;
+        }
+
         anim.SetInteger("state", (int)state);
     }
 
@@ -79,6 +104,10 @@ public class PlayerMovement : MonoBehaviour
     //terrain is set as a grounded state
     private bool IsGrounded()
     {
+        if (grav == -1)
+        {
+            return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.up, .1f, jumpableGround);
+        }
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 }
