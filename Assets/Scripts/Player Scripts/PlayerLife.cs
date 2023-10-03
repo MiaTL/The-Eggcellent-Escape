@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,15 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    private SpriteRenderer sprite;
+    private int playerLife;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        playerLife = 3;
     }
 
     //if player collides with something tagged as "Trap" then player will die: Future plans - Health will be lost till 0 and trigger death
@@ -19,6 +24,12 @@ public class PlayerLife : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            playerLife--;
+            Debug.Log("Player health: " + playerLife);
+        }
+        if (playerLife == 0)
+        {
+            playerLife = 3;
             RestartLevel();
             Die();
         }
