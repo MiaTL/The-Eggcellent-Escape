@@ -11,6 +11,9 @@ public class PlayerLife : MonoBehaviour
     private SpriteRenderer sprite;
     private int playerLife;
 
+    //Sound Effects
+    [SerializeField] private AudioSource deathSoundEffect; //Death sound effect
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,11 +38,14 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
+
     private void Die()
     {
+        deathSoundEffect.Play(); //Plays death sound effect
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
+        
 
     //Restarts level, future plans: Make it go to game over screen
     private void RestartLevel()
