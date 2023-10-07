@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private Animator anim;
     private SpriteRenderer sprite;
+
+    //for gravity function
     int grav;
 
     [SerializeField] private LayerMask jumpableGround;
@@ -38,9 +40,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+  
+        PlayerMoves();
+        PlayerJump();
+        SwitchGravity();
+
+        UpdateAnimationState();
+    }
+
+    private void PlayerMoves()
+    {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * dirX, rb.velocity.y);
+    }
 
+    private void PlayerJump()
+    {
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             if (grav == -1)
@@ -53,16 +68,17 @@ public class PlayerMovement : MonoBehaviour
                 jumpSoundEffect.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
             }
-            
-        }
 
+        }
+    }
+
+    private void SwitchGravity()
+    {
         if (Input.GetKeyDown("z"))
         {
             rb.gravityScale = rb.gravityScale * -1;
             grav *= -1;
         }
-
-        UpdateAnimationState();
     }
 
     //based off key presses, will move player horizontally and vertically. Will flip player via y axis when going left and right
