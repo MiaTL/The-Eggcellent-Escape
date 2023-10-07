@@ -40,11 +40,14 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("PLAYER HIT");
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+    //        // colliding with player inflicts damage and takes contact damage away from health
+    //        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+    //        player.HitSide(transform.position.x > player.transform.position.x);
+    //        player.TakeDamage(this.contactDamage);
+    //    }
+    //}
 }
