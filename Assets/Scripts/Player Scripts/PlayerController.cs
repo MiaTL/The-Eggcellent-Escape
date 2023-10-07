@@ -33,11 +33,14 @@ public class PlayerController : MonoBehaviour
     //speed of character
     float dirX = 0f;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpFloat = 14f;
+    [SerializeField] private float jumpFloat = 7f;
 
 
     //player's different movement states
     private enum MovementState { idle, running, jumping, falling }
+
+    //Player Sound Effects
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     // Start is called before the first frame update
     private void Start()
@@ -84,10 +87,12 @@ public class PlayerController : MonoBehaviour
         {
             if (grav == -1)
             {
+                jumpSoundEffect.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpFloat * -1);
             }
             else
             {
+                jumpSoundEffect.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
             }
 
