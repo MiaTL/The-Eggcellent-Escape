@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DentedPixel;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,9 +21,7 @@ public class PlayerController : MonoBehaviour
     //ability to take damage
     private bool isTakingDamage;
     private bool isInvincible;
-
-    //side hit from
-    private bool hitSideRight;
+    private bool hitSideRight; //side hit from
 
     //health
     public int currentHealth;
@@ -32,11 +31,19 @@ public class PlayerController : MonoBehaviour
     public GameObject redBar;
     public GameOverScreen gameOverScreen;
 
+    //Gun variables
+    private bool isShooting;
+    [SerializeField] int bulletDamage = 1;
+    [SerializeField] float bulletSpeed = 5f;
+    [SerializeField] Transform bulletShootPosition;
+    [SerializeField] GameObject bulletPrefab;
+
     //determine on what tiles can you jump
     [SerializeField] private LayerMask jumpableGround;
 
     //speed of character
     float dirX = 0f;
+    bool isFacingRight;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpFloat = 7f;
 
@@ -58,6 +65,7 @@ public class PlayerController : MonoBehaviour
         grav = 1;
         currentHealth = maxHealth;
         nextSwitch = 0;
+        isFacingRight = true;
     }
 
     // Update is called once per frame
@@ -71,6 +79,7 @@ public class PlayerController : MonoBehaviour
 
         PlayerMoves();
         PlayerJump();
+        PlayerShootInput();
         SwitchGravity();
 
         UpdateAnimationState();
@@ -119,14 +128,21 @@ public class PlayerController : MonoBehaviour
     //PLAYER ANIMATION FUNCTION
     private void UpdateAnimationState()
     {
+        Vector3 p = bulletShootPosition.localPosition;
         MovementState state;
         if (dirX > 0f)
         {
+            isFacingRight = true;
+            p.x *= Mathf.Abs(p.x);
+            bulletShootPosition.localPosition = p;
             state = MovementState.running;
             sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
+            isFacingRight = false;
+            p.x = Mathf.Abs(p.x) * - 1;
+            bulletShootPosition.localPosition = p;
             state = MovementState.running;
             sprite.flipX = true;
         }
@@ -297,6 +313,28 @@ public class PlayerController : MonoBehaviour
         isTakingDamage = false;
         isInvincible = false;
         anim.Play("Player_Hit", -1, 0f);
+    }
+
+    //Shooting functions
+    private void PlayerShootInput()
+    {
+        if (Input.GetKeyDown("c"))
+        {
+            ShootBullet();
+        }
+    }
+
+    private void ShootBullet()
+    {
+        
+        GameObject bullet = Instantiate(bulletPrefab, bulletShootPosition.position, Quaternion.identity);
+        bullet.name = bulletPrefab.name;
+
+        //set damage, speed, direction
+        bullet.GetComponent<BulletScript>().SetDamageValue(bulletDamage);
+        bullet.GetComponent<BulletScript>().SetBulletSpeed(bulletSpeed);
+        bullet.GetComponent<BulletScript>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
+        bullet.GetComponent<BulletScript>().Shoot();
     }
 
     private void Die()
