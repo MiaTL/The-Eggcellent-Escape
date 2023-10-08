@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DentedPixel;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,8 +25,11 @@ public class PlayerController : MonoBehaviour
     private bool hitSideRight;
 
     //health
-    private int currentHealth;
-    private int maxHealth = 3;
+    public int currentHealth;
+    public int maxHealth = 3;
+    public GameObject greenBar;
+    public GameObject yellowBar;
+    public GameObject redBar;
 
     //determine on what tiles can you jump
     [SerializeField] private LayerMask jumpableGround;
@@ -61,11 +65,8 @@ public class PlayerController : MonoBehaviour
         if (isTakingDamage)
         {
             anim.Play("Player_Hit");
-            //Debug.Log("WTF");
             return;
         }
-        Debug.Log(Time.time + " : " + nextSwitch);
-        Debug.Log(Time.time > nextSwitch);
 
         PlayerMoves();
         PlayerJump();
@@ -111,11 +112,6 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = rb.gravityScale * -1;
             grav *= -1;
         }
-        //if (Input.GetKeyDown("z"))
-        //{
-        //    rb.gravityScale = rb.gravityScale * -1;
-        //    grav *= -1;
-        //}
     }
     //END OF PLAYER MOVEMENT FUNCTIONS
 
@@ -244,8 +240,32 @@ public class PlayerController : MonoBehaviour
             else
             {
                 //Debug.Log("START TAKING DAMAGE");
+                HealthBar();
                 StartDamageAnimation();
             }
+        }
+    }
+
+    //HEALTH BAR FUNCTION
+    private void HealthBar()
+    {
+        if (currentHealth == 3)
+        {
+            LeanTween.scaleX(greenBar, 1, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 0, 0);
+        }
+        if (currentHealth == 2)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 1, 0);
+            LeanTween.scaleX(redBar, 0, 0);
+        }
+        if (currentHealth == 1)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 1, 0);
         }
     }
 
