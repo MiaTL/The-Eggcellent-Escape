@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public GameObject greenBar;
     public GameObject yellowBar;
     public GameObject redBar;
+    public GameOverScreen gameOverScreen;
 
     //determine on what tiles can you jump
     [SerializeField] private LayerMask jumpableGround;
@@ -209,8 +210,9 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = maxHealth;
-            RestartLevel();
+            //RestartLevel();
             Die();
+            gameOverScreen.Setup();
         }
     }
 
@@ -235,7 +237,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
-                Die();
+                //Die();
             }
             else
             {
@@ -267,6 +269,12 @@ public class PlayerController : MonoBehaviour
             LeanTween.scaleX(yellowBar, 0, 0);
             LeanTween.scaleX(redBar, 1, 0);
         }
+        if (currentHealth == 0)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 0, 0);
+        }
     }
 
     //damage taking function animator
@@ -293,6 +301,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        currentHealth = 0;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
