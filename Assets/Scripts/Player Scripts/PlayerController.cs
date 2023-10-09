@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
 
     //player's different movement states
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { idle, running, jumping, falling, damage }
 
     //Player Sound Effects
     [SerializeField] private AudioSource jumpSoundEffect;
@@ -130,6 +130,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 p = bulletShootPosition.localPosition;
         MovementState state;
+        if (isTakingDamage)
+        {
+            state = MovementState.damage;
+        }
         if (dirX > 0f)
         {
             isFacingRight = true;
@@ -312,7 +316,9 @@ public class PlayerController : MonoBehaviour
     {
         isTakingDamage = false;
         isInvincible = false;
+        Debug.Log("Reseting anim");
         anim.Play("Player_Hit", -1, 0f);
+        anim.Play("Player_Idle");
     }
 
     //Shooting functions
