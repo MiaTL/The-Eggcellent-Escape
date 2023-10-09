@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DentedPixel;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,25 +21,38 @@ public class PlayerController : MonoBehaviour
     //ability to take damage
     private bool isTakingDamage;
     private bool isInvincible;
-
-    //side hit from
-    private bool hitSideRight;
+    private bool hitSideRight; //side hit from
 
     //health
-    private int currentHealth;
-    private int maxHealth = 3;
+    public int currentHealth;
+    public int maxHealth = 3;
+    public GameObject greenBar;
+    public GameObject yellowBar;
+    public GameObject redBar;
+    public GameOverScreen gameOverScreen;
+
+    //Gun variables
+    private bool isShooting;
+    [SerializeField] int bulletDamage = 1;
+    [SerializeField] float bulletSpeed = 5f;
+    [SerializeField] Transform bulletShootPosition;
+    [SerializeField] GameObject bulletPrefab;
 
     //determine on what tiles can you jump
     [SerializeField] private LayerMask jumpableGround;
 
     //speed of character
     float dirX = 0f;
+    bool isFacingRight;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpFloat = 14f;
+    [SerializeField] private float jumpFloat = 7f;
 
 
     //player's different movement states
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { idle, running, jumping, falling, damage }
+
+    //Player Sound Effects
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     // Start is called before the first frame update
     private void Start()
@@ -50,6 +65,7 @@ public class PlayerController : MonoBehaviour
         grav = 1;
         currentHealth = maxHealth;
         nextSwitch = 0;
+        isFacingRight = true;
     }
 
     // Update is called once per frame
@@ -58,14 +74,12 @@ public class PlayerController : MonoBehaviour
         if (isTakingDamage)
         {
             anim.Play("Player_Hit");
-            //Debug.Log("WTF");
             return;
         }
-        Debug.Log(Time.time + " : " + nextSwitch);
-        Debug.Log(Time.time > nextSwitch);
 
         PlayerMoves();
         PlayerJump();
+        PlayerShootInput();
         SwitchGravity();
 
         UpdateAnimationState();
@@ -84,10 +98,12 @@ public class PlayerController : MonoBehaviour
         {
             if (grav == -1)
             {
+                jumpSoundEffect.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpFloat * -1);
             }
             else
             {
+                jumpSoundEffect.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
             }
 
@@ -106,25 +122,31 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = rb.gravityScale * -1;
             grav *= -1;
         }
-        //if (Input.GetKeyDown("z"))
-        //{
-        //    rb.gravityScale = rb.gravityScale * -1;
-        //    grav *= -1;
-        //}
     }
     //END OF PLAYER MOVEMENT FUNCTIONS
 
     //PLAYER ANIMATION FUNCTION
     private void UpdateAnimationState()
     {
+        Vector3 p = bulletShootPosition.localPosition;
         MovementState state;
+        if (isTakingDamage)
+        {
+            state = MovementState.damage;
+        }
         if (dirX > 0f)
         {
+            isFacingRight = true;
+            p.x *= Mathf.Abs(p.x);
+            bulletShootPosition.localPosition = p;
             state = MovementState.running;
             sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
+            isFacingRight = false;
+            p.x = Mathf.Abs(p.x) * - 1;
+            bulletShootPosition.localPosition = p;
             state = MovementState.running;
             sprite.flipX = true;
         }
@@ -151,7 +173,7 @@ public class PlayerController : MonoBehaviour
             sprite.flipY = false;
         }
 
-        //anim.SetInteger("state", (int)state);
+        anim.SetInteger("state", (int)state);
     }
 
     //checks to see if player is grounded
@@ -208,8 +230,9 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = maxHealth;
-            RestartLevel();
+            //RestartLevel();
             Die();
+            gameOverScreen.Setup();
         }
     }
 
@@ -234,13 +257,43 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
-                Die();
+                //Die();
             }
             else
             {
                 //Debug.Log("START TAKING DAMAGE");
+                HealthBar();
                 StartDamageAnimation();
             }
+        }
+    }
+
+    //HEALTH BAR FUNCTION
+    private void HealthBar()
+    {
+        if (currentHealth == 3)
+        {
+            LeanTween.scaleX(greenBar, 1, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 0, 0);
+        }
+        if (currentHealth == 2)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 1, 0);
+            LeanTween.scaleX(redBar, 0, 0);
+        }
+        if (currentHealth == 1)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 1, 0);
+        }
+        if (currentHealth == 0)
+        {
+            LeanTween.scaleX(greenBar, 0, 0);
+            LeanTween.scaleX(yellowBar, 0, 0);
+            LeanTween.scaleX(redBar, 0, 0);
         }
     }
 
@@ -263,11 +316,36 @@ public class PlayerController : MonoBehaviour
     {
         isTakingDamage = false;
         isInvincible = false;
+        Debug.Log("Reseting anim");
         anim.Play("Player_Hit", -1, 0f);
+        anim.Play("Player_Idle");
+    }
+
+    //Shooting functions
+    private void PlayerShootInput()
+    {
+        if (Input.GetKeyDown("c"))
+        {
+            ShootBullet();
+        }
+    }
+
+    private void ShootBullet()
+    {
+        
+        GameObject bullet = Instantiate(bulletPrefab, bulletShootPosition.position, Quaternion.identity);
+        bullet.name = bulletPrefab.name;
+
+        //set damage, speed, direction
+        bullet.GetComponent<BulletScript>().SetDamageValue(bulletDamage);
+        bullet.GetComponent<BulletScript>().SetBulletSpeed(bulletSpeed);
+        bullet.GetComponent<BulletScript>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
+        bullet.GetComponent<BulletScript>().Shoot();
     }
 
     private void Die()
     {
+        currentHealth = 0;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }

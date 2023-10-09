@@ -13,39 +13,48 @@ TagManager:
   - 
   - Water
   - UI
+  - Item
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Foreground
   - Ground
   - Terrain
   - Background
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Terrain
+  - name: Background
     uniqueID: 3935673435
     locked: 0
-  - name: Background
+  - name: Terrain
     uniqueID: 1333993859
+    locked: 0
+  - name: Player
+    uniqueID: 1514255413
+    locked: 0
+  - name: Item
+    uniqueID: 2699979373
+    locked: 0
+  - name: Foreground
+    uniqueID: 3663032901
     locked: 0
