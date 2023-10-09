@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
             sprite.flipY = false;
         }
 
-        //anim.SetInteger("state", (int)state);
+        anim.SetInteger("state", (int)state);
     }
 
     //checks to see if player is grounded
