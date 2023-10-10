@@ -237,8 +237,8 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
             //RestartLevel();
-            Die();
             gameOverScreen.Setup();
+            Die();
         }
     }
 
