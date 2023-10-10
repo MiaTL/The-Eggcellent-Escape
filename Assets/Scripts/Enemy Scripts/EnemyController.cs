@@ -10,11 +10,12 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 1;
     public int contactDamage = 1;
 
+    [SerializeField] private AudioSource deathSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-
     }
 
     public void Invincible(bool invincibility)
@@ -30,6 +31,7 @@ public class EnemyController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth); 
             if (currentHealth <= 0)
             {
+                //deathSoundEffect.Play();
                 Defeat();
             }
         }
@@ -37,6 +39,7 @@ public class EnemyController : MonoBehaviour
 
     private void Defeat()
     {
+        deathSoundEffect.Play();
         Destroy(gameObject);
     }
 
