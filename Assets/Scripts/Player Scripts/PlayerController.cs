@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     //Player Sound Effects
     [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource shootSoundEffect;
+    [SerializeField] private AudioSource deathSoundEffect;
 
     //UI Screens
     public GameOverScreen gameOverScreen;
@@ -69,7 +71,6 @@ public class PlayerController : MonoBehaviour
         grav = 1;
         currentHealth = maxHealth;
         nextSwitch = 0;
-        nextBullet = 0;
         isFacingRight = true;
     }
 
@@ -331,11 +332,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("c"))
         {
+
             if (Time.time < nextBullet)
             {
                 return;
             }
             nextBullet = Time.time + fireRate;
+            shootSoundEffect.Play();
             ShootBullet();
         }
     }
@@ -350,11 +353,13 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<BulletScript>().SetDamageValue(bulletDamage);
         bullet.GetComponent<BulletScript>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<BulletScript>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
+        shootSoundEffect.Play();
         bullet.GetComponent<BulletScript>().Shoot();
     }
 
     private void Die()
     {
+        deathSoundEffect.Play();
         currentHealth = 0;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
