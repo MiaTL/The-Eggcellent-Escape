@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
     //Gun variables
     private bool isShooting;
+    private float nextBullet;
+    [SerializeField] float fireRate = 1f;
     [SerializeField] int bulletDamage = 1;
     [SerializeField] float bulletSpeed = 5f;
     [SerializeField] Transform bulletShootPosition;
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
         grav = 1;
         currentHealth = maxHealth;
         nextSwitch = 0;
+        nextBullet = 0;
         isFacingRight = true;
     }
 
@@ -326,6 +329,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("c"))
         {
+            if (Time.time < nextBullet)
+            {
+                return;
+            }
+            nextBullet = Time.time + fireRate;
             ShootBullet();
         }
     }
