@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     public GameObject greenBar;
     public GameObject yellowBar;
     public GameObject redBar;
-    public GameOverScreen gameOverScreen;
 
     //Gun variables
     private bool isShooting;
@@ -57,6 +56,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource shootSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
+
+    //UI Screens
+    public GameOverScreen gameOverScreen;
 
     // Start is called before the first frame update
     private void Start()
@@ -235,8 +237,8 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
             //RestartLevel();
-            Die();
             gameOverScreen.Setup();
+            Die();
         }
     }
 
