@@ -521,6 +521,23 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+--- !u!1 &183578696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 364232612247393732, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+  m_PrefabInstance: {fileID: 1856566738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &183578704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183578696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0d26737bf94eb44916572dd36442ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &184746745
 GameObject:
   m_ObjectHideFlags: 0
@@ -7666,7 +7683,7 @@ GameObject:
   - component: {fileID: 480257876}
   m_Layer: 0
   m_Name: Entry Door
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9799,9 +9816,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 364232612247393732, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 848270718763388571, guid: 93547d211756cc047a93db4061baea3b, type: 3}
       propertyPath: m_Maskable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550418961644051095, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 183578704}
+    - target: {fileID: 4550418961644051095, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550418961644051095, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelOverScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550418961644051095, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4764199322372051631, guid: 93547d211756cc047a93db4061baea3b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9910,7 +9947,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 364232612247393732, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 183578704}
   m_SourcePrefab: {fileID: 100100000, guid: 93547d211756cc047a93db4061baea3b, type: 3}
 --- !u!1 &1865930567 stripped
 GameObject:
@@ -18937,9 +18977,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2084870063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b72f47c3e594fc340b5186374d40ae0e, type: 3}
+  m_Script: {fileID: 11500000, guid: f94412319924af6429c49ee650349903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelOverScreen: {fileID: 183578704}
 --- !u!61 &2084870067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18969,7 +19010,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

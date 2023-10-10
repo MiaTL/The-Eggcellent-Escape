@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     public GameObject greenBar;
     public GameObject yellowBar;
     public GameObject redBar;
-    public GameOverScreen gameOverScreen;
 
     //Gun variables
     private bool isShooting;
@@ -55,6 +54,9 @@ public class PlayerController : MonoBehaviour
 
     //Player Sound Effects
     [SerializeField] private AudioSource jumpSoundEffect;
+
+    //UI Screens
+    public GameOverScreen gameOverScreen;
 
     // Start is called before the first frame update
     private void Start()
