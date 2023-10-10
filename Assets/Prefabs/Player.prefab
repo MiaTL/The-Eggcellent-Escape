@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 402247267162816082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7525, y: -0.0538, z: 0}
+  m_LocalPosition: {x: 0.736, y: -0.0538, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 1514255413
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c06bddd80b22a84880006c70c9ebfb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5afbb7a4c6541b74fb35904805fad98f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,18 +182,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020814896, y: -0.01882723}
+  m_Offset: {x: -0.103925705, y: 0.0002757311}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.756, y: 1.318}
+    oldSize: {x: 0.89, y: 1.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.54055405, y: 1.1672876}
+  m_Size: {x: 0.38363266, y: 1.0335665}
   m_EdgeRadius: 0
 --- !u!114 &3632068169839077734
 MonoBehaviour:
@@ -214,6 +214,10 @@ MonoBehaviour:
   yellowBar: {fileID: 0}
   redBar: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  bulletDamage: 1
+  bulletSpeed: 10
+  bulletShootPosition: {fileID: 478894014754146281}
+  bulletPrefab: {fileID: 52583496443094605, guid: 3a4135a8f7aa3f04ba9981e7b0ff6ef3, type: 3}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -354,7 +358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7420849635591137904
 Transform:
   m_ObjectHideFlags: 0

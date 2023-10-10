@@ -1684,11 +1684,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1151641848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2042947439 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 478894014754146281, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-  m_PrefabInstance: {fileID: 5520740931119124597}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2048951578
 GameObject:
   m_ObjectHideFlags: 0
@@ -16740,10 +16735,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 478894014754146281, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.736
-      objectReference: {fileID: 0}
     - target: {fileID: 2012393184520998080, guid: f7803ca928139424abc206899cfc76cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.24
@@ -16801,21 +16792,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1362489684}
     - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-      propertyPath: bulletSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 52583496443094605, guid: 3a4135a8f7aa3f04ba9981e7b0ff6ef3, type: 3}
-    - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 888534933}
-    - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-      propertyPath: bulletShootPosition
-      value: 
-      objectReference: {fileID: 2042947439}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
