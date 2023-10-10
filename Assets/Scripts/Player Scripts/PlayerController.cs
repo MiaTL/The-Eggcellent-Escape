@@ -329,6 +329,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("c"))
         {
             shootSoundEffect.Play();
+
+            if (Time.time < nextBullet)
+            {
+                return;
+            }
+            nextBullet = Time.time + fireRate;
             ShootBullet();
         }
     }
