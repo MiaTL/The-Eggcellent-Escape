@@ -110,7 +110,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1514255413
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5afbb7a4c6541b74fb35904805fad98f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -213,7 +213,7 @@ MonoBehaviour:
   greenBar: {fileID: 0}
   yellowBar: {fileID: 0}
   redBar: {fileID: 0}
-  gameOverScreen: {fileID: 0}
+  fireRate: 1
   bulletDamage: 1
   bulletSpeed: 10
   bulletShootPosition: {fileID: 478894014754146281}
@@ -224,6 +224,9 @@ MonoBehaviour:
   moveSpeed: 7
   jumpFloat: 7
   jumpSoundEffect: {fileID: 8244640013920442011}
+  shootSoundEffect: {fileID: 0}
+  deathSoundEffect: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!95 &934921806573505696
 Animator:
   serializedVersion: 5
@@ -413,7 +416,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1594987923
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4b0dfea6dfc59f3418a410f75a134f08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

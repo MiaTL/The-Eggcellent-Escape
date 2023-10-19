@@ -7848,7 +7848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1403442193}
   bounds: 1
-  maxCamPos: {x: 61.34, y: 3.71, z: -10}
+  maxCamPos: {x: 57.12, y: 3.71, z: -10}
   minCamPos: {x: -27.4, y: 3.71, z: -10}
   smoothTimeY: 0.15
   smoothTimeX: 0.15
@@ -22019,6 +22019,37 @@ Transform:
   - {fileID: 1777917697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1182416287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182416288}
+  m_Layer: 0
+  m_Name: Waypoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182416288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182416287}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.44, y: -1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1873714067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199759903
 GameObject:
   m_ObjectHideFlags: 0
@@ -23471,7 +23502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 544959161}
+  - {fileID: 1182416287}
   - {fileID: 1055117273}
   speed: 2
 --- !u!61 &1754420891
@@ -23893,6 +23924,7 @@ Transform:
   m_Children:
   - {fileID: 1754420887}
   - {fileID: 1055117274}
+  - {fileID: 1182416288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899773262
@@ -32928,7 +32960,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.08, y: 2.27}
+  m_Size: {x: 0.24, y: 0.42}
   m_EdgeRadius: 0
 --- !u!1 &2094292912
 GameObject:
