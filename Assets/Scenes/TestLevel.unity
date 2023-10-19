@@ -889,7 +889,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -359293861
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.097777784, y: 0.015555561, z: 0}
@@ -1571,6 +1571,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  deathSoundEffect: {fileID: 0}
 --- !u!1 &1362489684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1797348886016676184, guid: 93547d211756cc047a93db4061baea3b, type: 3}
@@ -1760,7 +1761,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -359293861
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.012000024, y: 0.012000024, z: 0}
@@ -16581,6 +16582,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4073324730874451403, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073324730874451403, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073324730874451403, guid: 93547d211756cc047a93db4061baea3b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1300
+      objectReference: {fileID: 0}
     - target: {fileID: 5740640495936636942, guid: 93547d211756cc047a93db4061baea3b, type: 3}
       propertyPath: m_Name
       value: InGameUI
