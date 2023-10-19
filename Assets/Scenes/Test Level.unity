@@ -521,7 +521,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &184746745
 GameObject:
@@ -8082,7 +8081,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &559680559
 GameObject:
@@ -22403,7 +22401,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 1347662526}
 --- !u!82 &1347662526
 AudioSource:
@@ -22769,7 +22766,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &1481615127
 GameObject:
@@ -23286,11 +23282,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1653305739 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8244640013920442011, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-  m_PrefabInstance: {fileID: 1805880093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657142444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 364232612247393732, guid: 93547d211756cc047a93db4061baea3b, type: 3}
@@ -23435,7 +23426,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!95 &1754420889
 Animator:
@@ -23690,10 +23680,6 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1714699075}
-    - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
-      propertyPath: deathSoundEffect
-      value: 
-      objectReference: {fileID: 1653305739}
     - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
       propertyPath: shootSoundEffect
       value: 
@@ -24184,7 +24170,6 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &2020970193
 GameObject:
