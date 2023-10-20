@@ -40,11 +40,17 @@ TagManager:
   - Terrain
   - Background
   m_SortingLayers:
+  - name: Space
+    uniqueID: 2216393727
+    locked: 0
   - name: Background
     uniqueID: 3935673435
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Oil
+    uniqueID: 2914596291
     locked: 0
   - name: Terrain
     uniqueID: 1333993859
