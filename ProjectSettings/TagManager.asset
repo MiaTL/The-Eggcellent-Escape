@@ -43,6 +43,9 @@ TagManager:
   - name: Space
     uniqueID: 2216393727
     locked: 0
+  - name: Barriers
+    uniqueID: 4153846453
+    locked: 0
   - name: Background
     uniqueID: 3935673435
     locked: 0
