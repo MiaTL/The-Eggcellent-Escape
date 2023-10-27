@@ -521,6 +521,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &184746745
 GameObject:
@@ -7333,7 +7334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1403442193}
   bounds: 1
-  maxCamPos: {x: 61.34, y: 3.71, z: -10}
+  maxCamPos: {x: 57.12, y: 3.71, z: -10}
   minCamPos: {x: -27.4, y: 3.71, z: -10}
   smoothTimeY: 0.15
   smoothTimeX: 0.15
@@ -7567,6 +7568,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &559680559
 GameObject:
@@ -9425,6 +9427,37 @@ Transform:
   - {fileID: 1777917697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1182416287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182416288}
+  m_Layer: 0
+  m_Name: Waypoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182416288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182416287}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.44, y: -1.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1873714067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199759903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9809,6 +9842,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 1347662526}
 --- !u!82 &1347662526
 AudioSource:
@@ -10175,6 +10209,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &1481615127
 GameObject:
@@ -10691,6 +10726,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1653305739 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8244640013920442011, guid: f7803ca928139424abc206899cfc76cb, type: 3}
+  m_PrefabInstance: {fileID: 1805880093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657142444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 364232612247393732, guid: 93547d211756cc047a93db4061baea3b, type: 3}
@@ -10835,6 +10875,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!95 &1754420889
 Animator:
@@ -10870,7 +10911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 544959161}
+  - {fileID: 1182416287}
   - {fileID: 1055117273}
   speed: 2
 --- !u!61 &1754420891
@@ -11090,6 +11131,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1714699075}
     - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
+      propertyPath: deathSoundEffect
+      value: 
+      objectReference: {fileID: 1653305739}
+    - target: {fileID: 3632068169839077734, guid: f7803ca928139424abc206899cfc76cb, type: 3}
       propertyPath: shootSoundEffect
       value: 
       objectReference: {fileID: 1653305738}
@@ -11288,6 +11333,7 @@ Transform:
   m_Children:
   - {fileID: 1754420887}
   - {fileID: 1055117274}
+  - {fileID: 1182416288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899773262
@@ -11579,6 +11625,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
+  chickenPrefab: {fileID: 0}
   deathSoundEffect: {fileID: 0}
 --- !u!1 &2020970193
 GameObject:
@@ -20382,7 +20429,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.08, y: 2.27}
+  m_Size: {x: 0.24, y: 0.42}
   m_EdgeRadius: 0
 --- !u!1 &2094292912
 GameObject:
