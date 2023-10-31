@@ -233,6 +233,15 @@ public class PlayerController : MonoBehaviour
             TakeDamage(enemy.contactDamage);
             //Debug.Log("PLAYER HIT");
         }
+        if (collision.gameObject.CompareTag("Health"))
+        {
+            if (currentHealth < maxHealth)
+            {
+                getHealth(1);
+                Destroy(collision.gameObject);
+                HealthBar();
+            }
+        }
         if (currentHealth <= 0)
         {
             currentHealth = maxHealth;
@@ -272,6 +281,12 @@ public class PlayerController : MonoBehaviour
                 StartDamageAnimation();
             }
         }
+    }
+
+    public void getHealth(int heatlh)
+    {
+        currentHealth += heatlh;
+        HealthBar();
     }
 
     //HEALTH BAR FUNCTION

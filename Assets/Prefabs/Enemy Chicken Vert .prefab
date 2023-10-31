@@ -186,7 +186,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 1
   contactDamage: 1
-  chickenPrefab: {fileID: 0}
+  chickenPrefab: {fileID: 6597921606524620578, guid: 625e9b2ee8aa3d94b8b86080ec4776fb, type: 3}
   deathSoundEffect: {fileID: 4224086527941497744}
 --- !u!82 &4224086527941497744
 AudioSource:

@@ -39,10 +39,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void Defeat()
+    public void Defeat()
     {
-        deathSoundEffect.Play();
+        //deathSoundEffect.Play(); // not playing on death I do not know why...
         Destroy(gameObject);
+        GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
+        fry.name = chickenPrefab.name;
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
