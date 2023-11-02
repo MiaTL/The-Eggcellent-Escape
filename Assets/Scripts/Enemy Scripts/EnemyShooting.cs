@@ -9,10 +9,13 @@ public class EnemyShooting : MonoBehaviour
 
     private float timer;
     private GameObject player;
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,9 @@ public class EnemyShooting : MonoBehaviour
 
             if (timer > 2)
             {
+                // Trigger the animation
+                animator.SetTrigger("RedEyes");
+
                 timer = 0;
                 shoot();
             }
@@ -38,4 +44,5 @@ public class EnemyShooting : MonoBehaviour
     {
         Instantiate(laser, laserPos.position, Quaternion.identity);
     }
+
 }

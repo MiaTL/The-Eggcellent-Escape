@@ -9,7 +9,6 @@ public class EnemyLaser : MonoBehaviour
     private Rigidbody2D rb;
     public float speed;
     private float timer;
-    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +38,6 @@ public class EnemyLaser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerController playerController = other.GetComponent<PlayerController>();
-
-            playerController.TakeDamage(damage);
-
             Destroy(gameObject);
         }
     }
