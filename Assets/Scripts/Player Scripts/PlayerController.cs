@@ -33,9 +33,9 @@ public class PlayerController : MonoBehaviour
     //Gun variables
     private bool isShooting;
     private float nextBullet;
-    [SerializeField] float fireRate = 1f;
+    [SerializeField] float fireRate = 2f;
     [SerializeField] int bulletDamage = 1;
-    [SerializeField] float bulletSpeed = 5f;
+    [SerializeField] float bulletSpeed = 35f;
     [SerializeField] Transform bulletShootPosition;
     [SerializeField] GameObject bulletPrefab;
 
@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     //speed of character
     float dirX = 0f;
     bool isFacingRight;
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpFloat = 7f;
+    [SerializeField] private float moveSpeed = 25f;
+    [SerializeField] private float jumpFloat = 45f;
 
 
     //player's different movement states
@@ -325,8 +325,8 @@ public class PlayerController : MonoBehaviour
         {
             isTakingDamage = true;
             isInvincible = true;
-            float hitForceX = 3f;
-            float hitForceY = 2f;
+            float hitForceX = 15f;
+            float hitForceY = 10f;
             if (hitSideRight) hitForceX = -hitForceX;
             rb.velocity = Vector2.zero;
             rb.AddForce(new Vector2(hitForceX, hitForceY), ForceMode2D.Impulse);
@@ -368,7 +368,7 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<BulletScript>().SetDamageValue(bulletDamage);
         bullet.GetComponent<BulletScript>().SetBulletSpeed(bulletSpeed);
         bullet.GetComponent<BulletScript>().SetBulletDirection((isFacingRight) ? Vector2.right : Vector2.left);
-        shootSoundEffect.Play();
+        //shootSoundEffect.Play(); // double effect not needed
         bullet.GetComponent<BulletScript>().Shoot();
     }
 
