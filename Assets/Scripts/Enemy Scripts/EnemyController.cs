@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 1;
     public int contactDamage = 1;
 
+    [SerializeField] GameObject chickenPrefab;
+
     [SerializeField] private AudioSource deathSoundEffect;
 
     // Start is called before the first frame update
