@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8232598246062922751, guid: adf64e0762f008442948c5c7537e93a0, type: 3}
       propertyPath: m_Name
-      value: Enemy Chicken Horiz Variant
+      value: Enemy Chicken Vert Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8352436878065077683, guid: adf64e0762f008442948c5c7537e93a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -122,6 +122,10 @@ PrefabInstance:
     - target: {fileID: 8416217303038943477, guid: adf64e0762f008442948c5c7537e93a0, type: 3}
       propertyPath: m_LocalScale.y
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416217303038943477, guid: adf64e0762f008442948c5c7537e93a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 9065243766773845718, guid: adf64e0762f008442948c5c7537e93a0, type: 3}
       propertyPath: m_Icon

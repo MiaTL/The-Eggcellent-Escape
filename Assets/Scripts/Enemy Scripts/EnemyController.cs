@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 1;
     public int contactDamage = 1;
 
+    public Transform player;
+
     [SerializeField] GameObject chickenPrefab;
 
     [SerializeField] private AudioSource deathSoundEffect;
@@ -18,6 +20,42 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    void Update() 
+    {
+        if (player != null)
+        {
+            // Get the position of the player and the object
+            Vector3 playerPosition = player.position;
+            Vector3 objectPosition = transform.position;
+
+            // Check if the player is in front of or behind the object
+            if (playerPosition.x > objectPosition.x)
+            {
+                // Player is in front, flip the object to face the player
+                FlipOnXAxis(false);
+            }
+            else
+            {
+                // Player is behind, flip the object to face away from the player
+                FlipOnXAxis(true);
+            }
+        }
+    }
+
+    void FlipOnXAxis(bool flip)
+    {
+        Vector3 scale = transform.localScale;
+        if (flip)
+        {
+            scale.x = Mathf.Abs(scale.x) * -1;
+        }
+        else
+        {
+            scale.x = Mathf.Abs(scale.x);
+        }
+        transform.localScale = scale;
     }
 
     public void Invincible(bool invincibility)
