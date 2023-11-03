@@ -257,4 +257,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 5501756930177067197, guid: 2da948737214cd741b0dac6fcb493065, type: 3}
   laserPos: {fileID: 613347391621543053}
-  damage: 1

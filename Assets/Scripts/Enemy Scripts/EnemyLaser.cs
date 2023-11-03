@@ -38,6 +38,8 @@ public class EnemyLaser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerController player = other.GetComponent<PlayerController>();
+            player.TakeDamage(1);
             Destroy(gameObject);
         }
     }

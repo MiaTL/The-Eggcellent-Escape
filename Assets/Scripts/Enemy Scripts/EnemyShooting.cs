@@ -30,8 +30,7 @@ public class EnemyShooting : MonoBehaviour
 
             if (timer > 2)
             {
-                // Trigger the animation
-                animator.SetTrigger("RedEyes");
+                animator.Play("RedEyes");
 
                 timer = 0;
                 shoot();
