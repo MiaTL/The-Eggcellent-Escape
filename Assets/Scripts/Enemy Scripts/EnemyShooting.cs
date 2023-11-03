@@ -33,7 +33,12 @@ public class EnemyShooting : MonoBehaviour
                 animator.Play("RedEyes");
 
                 timer = 0;
-                shoot();
+
+                AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); 
+                if (stateInfo.IsName("RedEyes"))
+                {
+                    shoot();
+                }
             }
         }
 
@@ -42,6 +47,7 @@ public class EnemyShooting : MonoBehaviour
     void shoot()
     {
         Instantiate(laser, laserPos.position, Quaternion.identity);
+        animator.Play("BaseChickenWalk");
     }
 
 }
