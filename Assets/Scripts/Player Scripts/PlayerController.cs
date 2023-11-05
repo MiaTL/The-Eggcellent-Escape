@@ -253,7 +253,7 @@ public class PlayerController : MonoBehaviour
             currentHealth = maxHealth;
             //RestartLevel();
             Die();
-            gameOverScreen.Setup();
+            //gameOverScreen.Setup();
             //Die();
         }
     }
@@ -384,9 +384,15 @@ public class PlayerController : MonoBehaviour
         deathSoundEffect.Play();
         currentHealth = 0;
         HealthBar();
-        gameOverScreen.Setup();
+        //gameOverScreen.Setup();
+        anim.Play("Player_Death");
         rb.bodyType = RigidbodyType2D.Static;
-        anim.SetTrigger("death");
+        //anim.Play("Player_Death");
+    }
+
+    void gameOverSetup()
+    {
+        gameOverScreen.Setup();
     }
 
     //Restarts level, future plans: Make it go to game over screen
