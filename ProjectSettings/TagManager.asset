@@ -7,6 +7,7 @@ TagManager:
   - Trap
   - Enemy
   - Health
+  - Oil
   layers:
   - Default
   - TransparentFX

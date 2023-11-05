@@ -226,6 +226,12 @@ public class PlayerController : MonoBehaviour
             TakeDamage(1);
             //Debug.Log("PLAYER HIT");
         }
+        if (collision.gameObject.CompareTag("Oil"))
+        {
+            HitSide(gameObject.transform.position.x > transform.position.x);
+            TakeDamage(3);
+            //Debug.Log("PLAYER HIT");
+        }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
@@ -246,8 +252,9 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
             //RestartLevel();
-            gameOverScreen.Setup();
             Die();
+            gameOverScreen.Setup();
+            //Die();
         }
     }
 
@@ -272,7 +279,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
-                //Die();
+                Die();
             }
             else
             {
@@ -376,6 +383,8 @@ public class PlayerController : MonoBehaviour
     {
         deathSoundEffect.Play();
         currentHealth = 0;
+        HealthBar();
+        gameOverScreen.Setup();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
