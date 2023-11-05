@@ -226,6 +226,12 @@ public class PlayerController : MonoBehaviour
             TakeDamage(1);
             //Debug.Log("PLAYER HIT");
         }
+        if (collision.gameObject.CompareTag("Oil"))
+        {
+            HitSide(gameObject.transform.position.x > transform.position.x);
+            TakeDamage(3);
+            //Debug.Log("PLAYER HIT");
+        }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
