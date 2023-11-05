@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth); 
             if (currentHealth <= 0)
             {
-                //deathSoundEffect.Play();
+                deathSoundEffect.Play(); // not working
                 Defeat();
             }
         }
@@ -81,8 +81,12 @@ public class EnemyController : MonoBehaviour
     {
         //deathSoundEffect.Play(); // not playing on death I do not know why...
         Destroy(gameObject);
-        GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
-        fry.name = chickenPrefab.name;
+        int randNum = Random.Range(0, 10);
+        if (randNum >= 7)
+        {
+            GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
+            fry.name = chickenPrefab.name;
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
