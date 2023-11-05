@@ -26,11 +26,9 @@ public class EnemyController : MonoBehaviour
     {
         if (player != null)
         {
-            // Get the position of the player and the object
             Vector3 playerPosition = player.position;
             Vector3 objectPosition = transform.position;
 
-            // Check if the player is in front of or behind the object
             if (playerPosition.x > objectPosition.x)
             {
                 // Player is in front, flip the object to face the player
