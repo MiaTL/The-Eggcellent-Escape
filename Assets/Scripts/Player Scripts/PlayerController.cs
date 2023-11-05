@@ -246,8 +246,9 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
             //RestartLevel();
-            gameOverScreen.Setup();
             Die();
+            gameOverScreen.Setup();
+            //Die();
         }
     }
 
@@ -272,7 +273,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
-                //Die();
+                Die();
             }
             else
             {
@@ -376,6 +377,8 @@ public class PlayerController : MonoBehaviour
     {
         deathSoundEffect.Play();
         currentHealth = 0;
+        HealthBar();
+        gameOverScreen.Setup();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }

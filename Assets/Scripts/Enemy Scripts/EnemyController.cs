@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth); 
             if (currentHealth <= 0)
             {
-                //deathSoundEffect.Play();
+                deathSoundEffect.Play(); // not working
                 Defeat();
             }
         }
