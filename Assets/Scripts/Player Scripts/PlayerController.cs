@@ -24,11 +24,14 @@ public class PlayerController : MonoBehaviour
     private bool hitSideRight; //side hit from
 
     //health
-    public int currentHealth;
+    private int currentHealth;
     public int maxHealth = 3;
+    private int currentShield;
+    public int maxShield = 1;
     public GameObject greenBar;
     public GameObject yellowBar;
     public GameObject redBar;
+    public GameObject shieldBar;
 
     //Gun variables
     private bool isShooting;
@@ -70,6 +73,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         grav = 1;
         currentHealth = maxHealth;
+        currentShield = 0;
+        LeanTween.scaleX(shieldBar, 0, 0);
         nextSwitch = 0;
         isFacingRight = true;
     }
@@ -248,6 +253,12 @@ public class PlayerController : MonoBehaviour
                 HealthBar();
             }
         }
+        if (collision.gameObject.CompareTag("Shield") && currentShield < maxShield)
+        {
+            currentShield++;
+            Destroy(collision.gameObject);
+            HealthBar();
+        }
         if (currentHealth <= 0)
         {
             currentHealth = maxHealth;
@@ -275,6 +286,20 @@ public class PlayerController : MonoBehaviour
     {
         if (!isInvincible)
         {
+            if (currentShield == 1)
+            {
+                currentShield--;
+                HealthBar();
+                damage--;
+                if (damage == currentHealth)
+                {
+                    Die();
+                }
+                else
+                {
+                    StartDamageAnimation();
+                }
+            }
             currentHealth -= damage;
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
@@ -299,6 +324,14 @@ public class PlayerController : MonoBehaviour
     //HEALTH BAR FUNCTION
     private void HealthBar()
     {
+        if (currentShield == 1)
+        {
+            LeanTween.scaleX(shieldBar, 1, 0);
+        }
+        if (currentShield == 0)
+        {
+            LeanTween.scaleX(shieldBar, 0, 0);
+        }
         if (currentHealth == 3)
         {
             LeanTween.scaleX(greenBar, 1, 0);
