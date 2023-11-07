@@ -11,6 +11,9 @@ public class EnemyShooting : MonoBehaviour
     private GameObject player;
     private Animator animator;
 
+    //Laser sound effect
+    [SerializeField] private AudioSource laserSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public class EnemyShooting : MonoBehaviour
                 AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); 
                 if (stateInfo.IsName("RedEyes"))
                 {
+                    laserSoundEffect.Play();
                     shoot();
                 }
             }

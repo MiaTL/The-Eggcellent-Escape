@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -13,8 +14,11 @@ public class EnemyController : MonoBehaviour
     public Transform player;
 
     [SerializeField] GameObject chickenPrefab;
+  
 
+    //Sound Effects
     [SerializeField] private AudioSource deathSoundEffect;
+    public float soundDuration = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -70,14 +74,14 @@ public class EnemyController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 deathSoundEffect.Play(); // not working
-                Defeat();
+                StartCoroutine(DefeatWithSoundDelay());
             }
         }
     }
 
     public void Defeat()
     {
-        //deathSoundEffect.Play(); // not playing on death I do not know why...
+        
         Destroy(gameObject);
         int randNum = Random.Range(0, 10);
         if (randNum >= 7)
@@ -85,6 +89,15 @@ public class EnemyController : MonoBehaviour
             GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
             fry.name = chickenPrefab.name;
         }
+    }
+
+    private IEnumerator DefeatWithSoundDelay()
+    {
+        // Wait for the sound to finish playing
+        yield return new WaitForSeconds(soundDuration);
+
+        // Defeat enemy
+        Defeat();
     }
 
     //private void OnTriggerEnter2D(Collider2D other)

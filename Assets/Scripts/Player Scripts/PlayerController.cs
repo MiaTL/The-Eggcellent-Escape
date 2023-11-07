@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource shootSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
-
+    [SerializeField] private AudioSource itemSoundEffect;
+    [SerializeField] private AudioSource shieldSoundEffect;
     //UI Screens
     public GameOverScreen gameOverScreen;
 
@@ -248,6 +249,7 @@ public class PlayerController : MonoBehaviour
         {
             if (currentHealth < maxHealth)
             {
+                itemSoundEffect.Play();
                 getHealth(1);
                 Destroy(collision.gameObject);
                 HealthBar();
@@ -255,6 +257,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Shield") && currentShield < maxShield)
         {
+            shieldSoundEffect.Play();
             currentShield++;
             Destroy(collision.gameObject);
             HealthBar();
