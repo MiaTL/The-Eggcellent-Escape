@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
     private bool isInvincible;
+    private Animator animator;
 
     public int currentHealth;
     public int maxHealth = 1;
@@ -14,16 +14,14 @@ public class EnemyController : MonoBehaviour
     public Transform player;
 
     [SerializeField] GameObject chickenPrefab;
-  
 
-    //Sound Effects
-    [SerializeField] private AudioSource deathSoundEffect;
-    public float soundDuration = 1.0f;
+    //[SerializeField] private AudioSource deathSoundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     void Update() 
@@ -73,16 +71,17 @@ public class EnemyController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth); 
             if (currentHealth <= 0)
             {
-                deathSoundEffect.Play(); // not working
-                StartCoroutine(DefeatWithSoundDelay());
+                // deathSoundEffect.Play(); 
+                    Defeat();         
             }
         }
     }
 
     public void Defeat()
     {
-        
-        Destroy(gameObject);
+        //deathSoundEffect.Play(); // not playing on death I do not know why...
+        animator.Play("Death");
+        StartCoroutine(DestroyAfterAnimation());
         int randNum = Random.Range(0, 10);
         if (randNum >= 7)
         {
@@ -91,13 +90,13 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private IEnumerator DefeatWithSoundDelay()
+    private IEnumerator DestroyAfterAnimation()
     {
-        // Wait for the sound to finish playing
-        yield return new WaitForSeconds(soundDuration);
+        // Wait until the "Death" animation has finished
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
 
-        // Defeat enemy
-        Defeat();
+        // Now, destroy the game object
+        Destroy(gameObject);
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
