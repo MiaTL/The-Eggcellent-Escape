@@ -16,4 +16,10 @@ public class LevelOverScreen : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
     }
+
+    public void NextLevelButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
+    }
 }
