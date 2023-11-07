@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private bool isInvincible;
+    private Animator animator;
 
     public int currentHealth;
     public int maxHealth = 1;
@@ -14,12 +15,13 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] GameObject chickenPrefab;
 
-    [SerializeField] private AudioSource deathSoundEffect;
+    //[SerializeField] private AudioSource deathSoundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     void Update() 
@@ -69,8 +71,8 @@ public class EnemyController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth); 
             if (currentHealth <= 0)
             {
-                deathSoundEffect.Play(); // not working
-                Defeat();
+                // deathSoundEffect.Play(); 
+                    Defeat();         
             }
         }
     }
@@ -78,13 +80,23 @@ public class EnemyController : MonoBehaviour
     public void Defeat()
     {
         //deathSoundEffect.Play(); // not playing on death I do not know why...
-        Destroy(gameObject);
+        animator.Play("Death");
+        StartCoroutine(DestroyAfterAnimation());
         int randNum = Random.Range(0, 10);
         if (randNum >= 7)
         {
             GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
             fry.name = chickenPrefab.name;
         }
+    }
+
+    private IEnumerator DestroyAfterAnimation()
+    {
+        // Wait until the "Death" animation has finished
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
+
+        // Now, destroy the game object
+        Destroy(gameObject);
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
