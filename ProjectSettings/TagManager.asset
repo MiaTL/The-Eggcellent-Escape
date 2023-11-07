@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Health
   - Oil
+  - Shield
   layers:
   - Default
   - TransparentFX
