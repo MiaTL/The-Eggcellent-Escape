@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] GameObject chickenPrefab;
 
-    //[SerializeField] private AudioSource deathSoundEffect;
+    [SerializeField] private AudioSource deathSoundEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -79,7 +79,7 @@ public class EnemyController : MonoBehaviour
 
     public void Defeat()
     {
-        //deathSoundEffect.Play(); // not playing on death I do not know why...
+        deathSoundEffect.Play(); // not playing on death I do not know why...
         animator.Play("Death");
         StartCoroutine(DestroyAfterAnimation());
     }
