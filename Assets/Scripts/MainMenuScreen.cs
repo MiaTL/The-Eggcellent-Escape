@@ -21,6 +21,18 @@ public class MainMenuScreen : MonoBehaviour
         Application.Quit();
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings Menu");
+        Time.timeScale = 1f;
+    }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;       
+    }
+
     private IEnumerator TransitionWithSoundDelay()
     {
         // Wait for the sound to finish playing
