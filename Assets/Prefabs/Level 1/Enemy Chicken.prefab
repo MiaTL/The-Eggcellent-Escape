@@ -190,7 +190,6 @@ MonoBehaviour:
   contactDamage: 1
   player: {fileID: 0}
   chickenPrefab: {fileID: 6597921606524620578, guid: 625e9b2ee8aa3d94b8b86080ec4776fb, type: 3}
-  deathSoundEffect: {fileID: 0}
 --- !u!82 &8807498418154595245
 AudioSource:
   m_ObjectHideFlags: 0
@@ -301,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 5501756930177067197, guid: 2da948737214cd741b0dac6fcb493065, type: 3}
   laserPos: {fileID: 3994924816886512154}
+  laserSoundEffect: {fileID: 0}
 --- !u!1 &8604364404724925670
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 8604364404724925670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.395, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
