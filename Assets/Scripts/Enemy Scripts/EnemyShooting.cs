@@ -12,7 +12,7 @@ public class EnemyShooting : MonoBehaviour
     private Animator animator;
 
     //Laser sound effect
-    [SerializeField] private AudioSource laserSoundEffect;
+    [SerializeField] private AudioSource laserSoundEffect; 
 
     // Start is called before the first frame update
     void Start()
@@ -30,18 +30,20 @@ public class EnemyShooting : MonoBehaviour
         if (distance < 55)
         {
             timer += Time.deltaTime;
-
             if (timer > 2)
             {
-                animator.Play("RedEyes");
-
-                timer = 0;
-
-                AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); 
-                if (stateInfo.IsName("RedEyes"))
+                AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                if (!stateInfo.IsName("Death"))
                 {
-                    laserSoundEffect.Play();
-                    shoot();
+                    animator.Play("RedEyes");
+
+                    timer = 0;
+
+                    if (stateInfo.IsName("RedEyes"))
+                    {
+                        shoot();
+                        laserSoundEffect.Play();
+                    }
                 }
             }
         }
@@ -55,3 +57,4 @@ public class EnemyShooting : MonoBehaviour
     }
 
 }
+

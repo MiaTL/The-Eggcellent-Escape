@@ -82,12 +82,6 @@ public class EnemyController : MonoBehaviour
         //deathSoundEffect.Play(); // not playing on death I do not know why...
         animator.Play("Death");
         StartCoroutine(DestroyAfterAnimation());
-        int randNum = Random.Range(0, 10);
-        if (randNum >= 7)
-        {
-            GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
-            fry.name = chickenPrefab.name;
-        }
     }
 
     private IEnumerator DestroyAfterAnimation()
@@ -97,6 +91,13 @@ public class EnemyController : MonoBehaviour
 
         // Now, destroy the game object
         Destroy(gameObject);
+
+        int randNum = Random.Range(0, 10);
+        if (randNum >= 7)
+        {
+            GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
+            fry.name = chickenPrefab.name;
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D other)
