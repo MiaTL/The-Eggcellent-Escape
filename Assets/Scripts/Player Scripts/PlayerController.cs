@@ -307,6 +307,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
+                deathSoundEffect.Play();
                 Die();
             }
             else
@@ -417,7 +418,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        deathSoundEffect.Play();
+        
         currentHealth = 0;
         HealthBar();
         //gameOverScreen.Setup();
