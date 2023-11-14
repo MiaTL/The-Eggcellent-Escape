@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DentedPixel;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
 
     //determine on what tiles can you jump
-    [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask jumpableGround; 
 
     //speed of character
     float dirX = 0f;
@@ -91,19 +92,46 @@ public class PlayerController : MonoBehaviour
 
         PlayerMoves();
         PlayerJump();
-        PlayerShootInput();
-        SwitchGravity();
+        //PlayerShootInput();
+        //SwitchGravity();
 
         UpdateAnimationState();
     }
 
-    //PLAYER MOVEMENT FUNCTIONS
+    //Controller Testing Functions
+    public void Move(InputAction.CallbackContext context)
+    {
+        dirX = context.ReadValue<Vector2>().x;
+        rb.velocity = new Vector2(moveSpeed * dirX, rb.velocity.y);
+    }
     private void PlayerMoves()
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveSpeed * dirX, rb.velocity.y);
     }
 
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            if (grav == -1)
+            {
+                jumpSoundEffect.Play();
+                rb.velocity = new Vector2(rb.velocity.x, jumpFloat * -1);
+            }
+            else
+            {
+                jumpSoundEffect.Play();
+                rb.velocity = new Vector2(rb.velocity.x, jumpFloat);
+            }
+        }
+    }
+
+
+    //PLAYER MOVEMENT FUNCTIONS
+
+
+    
     private void PlayerJump()
     {
         if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -121,10 +149,10 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
-    private void SwitchGravity()
+    
+    public void SwitchGravity(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown("z"))
+        if (context.performed)
         {
             if (Time.time < nextSwitch)
             {
@@ -307,6 +335,7 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
+                deathSoundEffect.Play();
                 Die();
             }
             else
@@ -386,9 +415,9 @@ public class PlayerController : MonoBehaviour
     }
 
     //Shooting functions
-    private void PlayerShootInput()
+    public void Shoot(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown("c"))
+        if (context.performed)
         {
 
             if (Time.time < nextBullet)
@@ -417,7 +446,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        deathSoundEffect.Play();
+        
         currentHealth = 0;
         HealthBar();
         //gameOverScreen.Setup();
