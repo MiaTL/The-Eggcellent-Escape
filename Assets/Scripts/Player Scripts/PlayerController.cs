@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         UpdateAnimationState();
     }
 
-    //Controller Testing Functions
+    //Controller Testing Functions (WORKING)
     public void Move(InputAction.CallbackContext context)
     {
         dirX = context.ReadValue<Vector2>().x;
