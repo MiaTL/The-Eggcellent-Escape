@@ -10,7 +10,7 @@ public class CutsceneController : MonoBehaviour
     //private Queue<string> sentences
     public TMP_Text text;
     private int counter;
-    private int maxCount;
+    public int maxCount;
 
     [SerializeField] private GameObject image1;
     [SerializeField] private GameObject image2;
