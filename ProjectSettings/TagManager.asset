@@ -9,6 +9,7 @@ TagManager:
   - Health
   - Oil
   - Shield
+  - AudioSource
   layers:
   - Default
   - TransparentFX

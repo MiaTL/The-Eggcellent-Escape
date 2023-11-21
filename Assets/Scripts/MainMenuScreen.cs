@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScreen : MonoBehaviour
 {
     [SerializeField] private AudioSource playButton;
+    public GameObject settingsMenu;
     public float soundDuration = 3.0f;
 
     public void StartGame()
@@ -21,16 +22,14 @@ public class MainMenuScreen : MonoBehaviour
         Application.Quit();
     }
 
-    public void Settings()
-    {
-        SceneManager.LoadScene("Settings Menu");
-        Time.timeScale = 1f;
-    }
-
     public void BackButton()
     {
-        SceneManager.LoadScene("Menu");
-        Time.timeScale = 1f;       
+        settingsMenu.SetActive(false);
+    }
+
+    public void ToggleSettings()
+    {
+        settingsMenu.SetActive(true);
     }
 
     private IEnumerator TransitionWithSoundDelay()
