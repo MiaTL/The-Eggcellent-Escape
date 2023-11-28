@@ -5,19 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
-    void Update()
-    {
-        if (Input.GetKeyDown("p"))
-        {
-            gameObject.SetActive(true);
-            Time.timeScale = 0;
-        }
-    }
-
     public void ResumeButton()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 
     public void RestartButton()
