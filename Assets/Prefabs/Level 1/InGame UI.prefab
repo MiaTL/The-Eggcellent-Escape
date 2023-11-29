@@ -2669,7 +2669,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8418551252928625970}
         m_TargetAssemblyTypeName: LevelOverScreen, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NextLevelButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 5130887494146359039}
   - component: {fileID: 186750185963057946}
   - component: {fileID: 610723917931342887}
-  - component: {fileID: 4243583615778599118}
+  - component: {fileID: 5616594817890963620}
   - component: {fileID: 8807498418154595245}
-  - component: {fileID: 1889948278678421412}
+  - component: {fileID: 3917147104320320736}
   - component: {fileID: 8635317856284359785}
   m_Layer: 0
   m_Name: 'Armored Enemy Chicken '
-  m_TagString: Enemy
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +174,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4243583615778599118
+--- !u!114 &5616594817890963620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5140166324116762918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64f72ed7959cf7746ada811621860826, type: 3}
+  m_Script: {fileID: 11500000, guid: 78bb5a2f4258ccd4193a058c801dc7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   contactDamage: 1
   player: {fileID: 0}
   chickenPrefab: {fileID: 6597921606524620578, guid: 625e9b2ee8aa3d94b8b86080ec4776fb, type: 3}
-  deathSoundEffect: {fileID: 0}
+  deathSoundEffect: {fileID: 8807498418154595245}
 --- !u!82 &8807498418154595245
 AudioSource:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1889948278678421412
+--- !u!114 &3917147104320320736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,12 +297,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5140166324116762918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ab63b1ec5ddeb4cb69680f509e223d, type: 3}
+  m_Script: {fileID: 11500000, guid: 325a2b5918c09d8478798893d707ff21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5501756930177067197, guid: 2da948737214cd741b0dac6fcb493065, type: 3}
   laserPos: {fileID: 3994924816886512154}
-  laserSoundEffect: {fileID: 8635317856284359785}
+  laserSoundEffect: {fileID: 8807498418154595245}
 --- !u!82 &8635317856284359785
 AudioSource:
   m_ObjectHideFlags: 0
