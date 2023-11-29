@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 270394267970809003}
   - component: {fileID: 270394267970809002}
   - component: {fileID: 270394267970809005}
-  - component: {fileID: 270394267970809004}
   - component: {fileID: 270394267970809007}
   m_Layer: 4
   m_Name: WaterSimple
@@ -59,7 +58,7 @@ MonoBehaviour:
   spacing: 1
   springConstant: 0.02
   springDamping: 0.01
-  splashParticle: {fileID: 8182259482044427717, guid: cb34616c3fdca38438ebbb7b3c397cef, type: 3}
+  splashParticle: {fileID: 0}
   vertices:
   - {x: 0, y: 0}
   - {x: 0, y: 1}
@@ -171,7 +170,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 43bee363a00a02240b6edcbe6f5f6299, type: 2}
+  - {fileID: 2100000, guid: 0297758ea2a13324cace7816aac6fa33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,25 +192,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!253 &270394267970809004
-BuoyancyEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270394267970809006}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 640
-  m_SurfaceLevel: 1
-  m_Density: 2
-  m_LinearDrag: 5
-  m_AngularDrag: 5
-  m_FlowAngle: 0
-  m_FlowMagnitude: 0
-  m_FlowVariation: 0
 --- !u!61 &270394267970809007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,7 +222,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 9.5, y: 0.49999997}
   m_SpriteTilingProperty:
