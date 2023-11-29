@@ -67,6 +67,12 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
             enemy.Defeat();
         }
+        if (other.CompareTag("Enemy2"))
+        {
+            AEnemyController enemy = other.GetComponent<AEnemyController>();
+            Destroy(gameObject);
+            enemy.Defeat();
+        }
         //Destroy(gameObject);
     }
 }
