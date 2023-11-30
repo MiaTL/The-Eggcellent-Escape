@@ -15,6 +15,8 @@ public class CluckController : MonoBehaviour
     private Transform player;
 
     public GameObject healthBar;
+    public GameObject healthOutline;
+    public GameObject ccText;
 
     public GameObject eggscapePod;
 
@@ -81,6 +83,8 @@ public class CluckController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 // deathSoundEffect.Play(); 
+                healthOutline.SetActive(false);
+                ccText.SetActive(false);
                 Defeat();
             }
         }
