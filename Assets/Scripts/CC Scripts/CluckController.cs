@@ -16,6 +16,8 @@ public class CluckController : MonoBehaviour
 
     public GameObject healthBar;
 
+    public GameObject eggscapePod;
+
     [SerializeField] private AudioSource deathSoundEffect;
     [SerializeField] private AudioSource damageSoundEffect;
 
@@ -89,6 +91,11 @@ public class CluckController : MonoBehaviour
         deathSoundEffect.Play(); // not playing on death I do not know why...
         animator.Play("CC_Death");
         StartCoroutine(DestroyAfterAnimation());
+
+        if (eggscapePod != null)
+        {
+            eggscapePod.SetActive(true);
+        }
     }
 
     public void healthBarUpdate()
