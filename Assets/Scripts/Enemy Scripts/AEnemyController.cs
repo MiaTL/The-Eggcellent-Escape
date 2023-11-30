@@ -68,6 +68,7 @@ public class AEnemyController : MonoBehaviour
         if (!isInvincible)
         {
             currentHealth -= damage;
+            animator.Play("A_Hit");
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
