@@ -273,6 +273,13 @@ public class PlayerController : MonoBehaviour
             TakeDamage(enemy.contactDamage);
             //Debug.Log("PLAYER HIT");
         }
+        if (collision.gameObject.CompareTag("Enemy2"))
+        {
+            AEnemyController enemy = collision.gameObject.GetComponent<AEnemyController>();
+            HitSide(enemy.transform.position.x > transform.position.x);
+            TakeDamage(enemy.contactDamage);
+            //Debug.Log("PLAYER HIT");
+        }
         if (collision.gameObject.CompareTag("Health"))
         {
             if (currentHealth < maxHealth)

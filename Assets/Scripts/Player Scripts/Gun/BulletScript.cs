@@ -71,7 +71,7 @@ public class BulletScript : MonoBehaviour
         {
             AEnemyController enemy = other.GetComponent<AEnemyController>();
             Destroy(gameObject);
-            enemy.Defeat();
+            enemy.TakeDamage(damage);
         }
         if (other.CompareTag("Cluck"))
         {
