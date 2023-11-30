@@ -8,20 +8,25 @@ public class CluckController : MonoBehaviour
     private Animator animator;
 
     public int currentHealth;
-    public int maxHealth = 1;
+    public int maxHealth = 10;
     public int contactDamage = 1;
 
-    public Transform player;
+    private GameObject playerObject;
+    private Transform player;
 
-    [SerializeField] GameObject chickenPrefab;
+    public GameObject healthBar;
 
     [SerializeField] private AudioSource deathSoundEffect;
+    [SerializeField] private AudioSource damageSoundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
     }
 
     void Update()
@@ -34,12 +39,12 @@ public class CluckController : MonoBehaviour
             if (playerPosition.x > objectPosition.x)
             {
                 // Player is in front, flip the object to face the player
-                FlipOnXAxis(false);
+                FlipOnXAxis(true);
             }
             else
             {
                 // Player is behind, flip the object to face away from the player
-                FlipOnXAxis(true);
+                FlipOnXAxis(false);
             }
         }
     }
@@ -68,6 +73,8 @@ public class CluckController : MonoBehaviour
         if (!isInvincible)
         {
             currentHealth -= damage;
+            healthBarUpdate();
+            damageSoundEffect.Play();
             Mathf.Clamp(currentHealth, 0, maxHealth);
             if (currentHealth <= 0)
             {
@@ -80,8 +87,13 @@ public class CluckController : MonoBehaviour
     public void Defeat()
     {
         deathSoundEffect.Play(); // not playing on death I do not know why...
-        animator.Play("Death");
+        animator.Play("CC_Death");
         StartCoroutine(DestroyAfterAnimation());
+    }
+
+    public void healthBarUpdate()
+    {
+        LeanTween.scaleX(healthBar, currentHealth * 0.1f, 0);
     }
 
     private IEnumerator DestroyAfterAnimation()
@@ -91,12 +103,5 @@ public class CluckController : MonoBehaviour
 
         // Now, destroy the game object
         Destroy(gameObject);
-
-        int randNum = Random.Range(0, 10);
-        if (randNum >= 7)
-        {
-            GameObject fry = Instantiate(chickenPrefab, transform.position, Quaternion.identity);
-            fry.name = chickenPrefab.name;
-        }
     }
 }

@@ -8,6 +8,7 @@ public class CluckShoot : MonoBehaviour
     public GameObject laser;
     public Transform laserPos;
     public GameObject chickPre;
+    public GameObject healthBar;
 
     private float timer;
     private float chickTimer;
@@ -36,18 +37,19 @@ public class CluckShoot : MonoBehaviour
 
         if (distance < 80)
         {
+            healthBar.SetActive(true);
             timer += Time.deltaTime;
             chickTimer += Time.deltaTime;
 
-            if (chickTimer > 5f && !laserBool)
+            if (chickTimer > 2f && !laserBool)
             {
                 chickBool = true;
                 AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                if (!stateInfo.IsName("Death"))
+                if (!stateInfo.IsName("CC_Death"))
                 {
                     animator.Play("CC_Punch");
 
-                    chickTimer = UnityEngine.Random.Range(0, 3);
+                    chickTimer = 0;
 
                     if (stateInfo.IsName("CC_Punch"))
                     {
@@ -62,7 +64,7 @@ public class CluckShoot : MonoBehaviour
             {
                 laserBool = true;
                 AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                if (!stateInfo.IsName("Death"))
+                if (!stateInfo.IsName("CC_Death"))
                 {
                     animator.Play("CC_RedEyes");
 
