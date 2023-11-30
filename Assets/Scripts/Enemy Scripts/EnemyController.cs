@@ -11,7 +11,8 @@ public class EnemyController : MonoBehaviour
     public int maxHealth = 1;
     public int contactDamage = 1;
 
-    public Transform player;
+    private GameObject playerObject;
+    private Transform player;
 
     [SerializeField] GameObject chickenPrefab;
 
@@ -20,6 +21,9 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
+
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
     }
