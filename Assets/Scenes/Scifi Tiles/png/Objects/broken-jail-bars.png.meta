@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f612b5ec8e7054ca5b5d5bc00e319e20
+guid: e5035345013734c589629f0e753810d5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,15 +106,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: circular window_0
+      name: broken-jail-bars_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3739cdda58c024be181eaa4be6b6a3ac
+      internalID: -1820608831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -124,18 +158,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be017aeabb3f548088939547d7b2778d
-      internalID: -4778847
+      spriteID: 56f2ac1c8fbcb456890acbd2b0655367
+      internalID: 1680932722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_1
+      name: broken-jail-bars_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -145,18 +179,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e17683bc7ed54259aced040df726f21
-      internalID: -762930092
+      spriteID: 73808dc246cba4a559efa714be01658d
+      internalID: 1186624789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_2
+      name: broken-jail-bars_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -166,18 +200,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32176f8acb9ff448599977d16852842f
-      internalID: 383100964
+      spriteID: 6350761038a1e47d5a0ca97317ed09b1
+      internalID: -1959067779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_3
+      name: broken-jail-bars_4
       rect:
         serializedVersion: 2
         x: 256
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -187,18 +221,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f36cec57964c7416aa8aef3bbfb9ec1b
-      internalID: 1682450851
+      spriteID: a90dd735254d44f36b083e6cb45b0f2e
+      internalID: -1809862923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_4
+      name: broken-jail-bars_5
       rect:
         serializedVersion: 2
         x: 320
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -208,18 +242,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cdee7ccc7a384cf4be8423b2853ddf1
-      internalID: -2097643081
+      spriteID: beb0eb24d08fe4f7992dd330a6e11409
+      internalID: 1858931693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_5
+      name: broken-jail-bars_6
       rect:
         serializedVersion: 2
         x: 384
-        y: 448
+        y: 321
         width: 64
         height: 64
       alignment: 0
@@ -229,18 +263,123 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0309c41f21d794dff8445f1a54cd6747
-      internalID: -1701015756
+      spriteID: 944d360fa8530476fbf177f9e189fa99
+      internalID: -1611940862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_6
+      name: broken-jail-bars_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59681714076264dd4838db7d10f9f864
+      internalID: 1891795028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a843325b3a684f24943e601378a948f
+      internalID: -1802330383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb77302eef1b4a72a920306e7f6bb8c
+      internalID: 169529461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c51a5bd9b7ff42908489117b075a7b3
+      internalID: 373268574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 321
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d9d713cadb8474287da3ffc240226a
+      internalID: 701343513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -250,18 +389,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: becc3645037f14694ad8a35af9d7a4d6
-      internalID: 1221276564
+      spriteID: ea4e6e465768343e0842398c2ff36687
+      internalID: -1319494935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_7
+      name: broken-jail-bars_13
       rect:
         serializedVersion: 2
         x: 64
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -271,18 +410,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b402ef311cac74649aabefbfa33f9285
-      internalID: -1673568855
+      spriteID: 4cca01bdc49624bf0a89f8eb0bba5528
+      internalID: 933218344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_8
+      name: broken-jail-bars_14
       rect:
         serializedVersion: 2
         x: 128
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -292,18 +431,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c5b38b1e52754d6ebe65b75c50593d8
-      internalID: 1585972289
+      spriteID: eef4f6f38c05c4dd9abbcd63939b6de4
+      internalID: -582966118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_9
+      name: broken-jail-bars_15
       rect:
         serializedVersion: 2
         x: 192
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -313,18 +452,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb39487e2a2b4031814bedface9269e
-      internalID: 2131800365
+      spriteID: ce7413416c3ea4cabb4926b27017a86f
+      internalID: 1280961586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_10
+      name: broken-jail-bars_16
       rect:
         serializedVersion: 2
         x: 256
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -334,18 +473,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0645a3292a36f48e688943543da2fe38
-      internalID: 578127103
+      spriteID: 22c01d8c05169472095e480c9b345d2a
+      internalID: 626100595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_11
+      name: broken-jail-bars_17
       rect:
         serializedVersion: 2
         x: 320
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -355,18 +494,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 064ad2969f6f0485caa60b5a50287c08
-      internalID: -765513008
+      spriteID: f4358188e1d8f482dafdaa3852e61260
+      internalID: -1086322975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_12
+      name: broken-jail-bars_18
       rect:
         serializedVersion: 2
         x: 384
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -376,18 +515,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cebdf15ce0be45d39665202ab06c540
-      internalID: -1573734108
+      spriteID: ab1d41d7608694cc39e3a952d95e4626
+      internalID: 1371787030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_13
+      name: broken-jail-bars_19
       rect:
         serializedVersion: 2
         x: 448
-        y: 384
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -397,18 +536,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f906f67df574640f297f5e930bffff5f
-      internalID: -423318842
+      spriteID: c8bcb085b6e7e4abbb76697a34c5600f
+      internalID: 1133665075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_14
+      name: broken-jail-bars_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8761508b7db4a848d3adf228c5fa3c
+      internalID: -105581160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2576a81cd60b44ef287c9f0aa1ed4b20
+      internalID: 1782670943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f405902246e4815aa5bd40002a5d3c
+      internalID: 1913401285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_23
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 257
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8277bb79eb01f4fa9a2ec07810664cdc
+      internalID: 1646765354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -418,18 +641,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be0ec338567642b78e042a2ab7b087c
-      internalID: -861850092
+      spriteID: ced9358ced7d74732a73ccb7cf2934e2
+      internalID: 570352068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_15
+      name: broken-jail-bars_25
       rect:
         serializedVersion: 2
         x: 64
-        y: 320
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -439,18 +662,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 792091b035d0b48f9bbb419c9936d2ce
-      internalID: 243703348
+      spriteID: 923fa4daf20714321ba3d529ce77a5a9
+      internalID: -326408821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_16
+      name: broken-jail-bars_26
       rect:
         serializedVersion: 2
         x: 128
-        y: 320
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -460,18 +683,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b6d2c6c73694f5ead07114fe9423bb
-      internalID: 21210004
+      spriteID: f164f0b076e994cd1af5f26071276dcf
+      internalID: -306154218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_17
+      name: broken-jail-bars_27
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
+        x: 512
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -481,18 +704,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 870e8183d35954e158ca1c8799405c5c
-      internalID: 1111061773
+      spriteID: c638a2149a5f840aab32b87f2c75def0
+      internalID: 1195841965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_18
+      name: broken-jail-bars_28
       rect:
         serializedVersion: 2
-        x: 384
-        y: 320
+        x: 640
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -502,18 +725,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b796a8f7cb0ff4754a898faf78b72351
-      internalID: 1333133344
+      spriteID: 9109c0fff1b5340cfae213c65a04db56
+      internalID: -652994884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_19
+      name: broken-jail-bars_29
       rect:
         serializedVersion: 2
-        x: 448
-        y: 320
+        x: 704
+        y: 193
         width: 64
         height: 64
       alignment: 0
@@ -523,102 +746,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9875adcc77f94f8bab750c8030a8ae0
-      internalID: 1281669068
+      spriteID: 37483ccabf3ea4f9ba64783625fce97f
+      internalID: 343966713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7da878a63203c4d9293dd0fea2c2c91c
-      internalID: 1000143576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_21
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f128beba74cac46cd8a373b4142d45b1
-      internalID: 1507650548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_22
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2178f78a7d6be490b94e2d821c8af84b
-      internalID: -1494868517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_23
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 256
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b37fa5b0a84a49a5ae5218da6b3b9f2
-      internalID: 72278449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_24
+      name: broken-jail-bars_30
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 129
         width: 64
         height: 64
       alignment: 0
@@ -628,18 +767,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37f5e36f63b84412a4dfc0ed655649b
-      internalID: -468057870
+      spriteID: 9d17a4a4f7f5f4c768e1a03bab541dd9
+      internalID: 2078286366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_25
+      name: broken-jail-bars_31
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 129
         width: 64
         height: 64
       alignment: 0
@@ -649,102 +788,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9000f1c2241348f6be0ed8b78fb3b32
-      internalID: -418380163
+      spriteID: 9c83e667118214a7ba4c7f09ba24dd1c
+      internalID: -590551336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_26
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed146ed8ddea648efa9fca14916e7267
-      internalID: 1199612969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_27
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 192
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3ad8c58887ce46209b1a05dc232c914
-      internalID: -1219006814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_28
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c4e35cad853d45a090602f5a40e33c5
-      internalID: 607631227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_29
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ebd27f62052e417aad90cda3d72487a
-      internalID: -975714864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_30
+      name: broken-jail-bars_32
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 129
         width: 64
         height: 64
       alignment: 0
@@ -754,18 +809,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6def76cc22d1d4b0f94d33f344cbbee2
-      internalID: -1590287629
+      spriteID: df3c9c56b136146f297045493ca01934
+      internalID: -1082884629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_31
+      name: broken-jail-bars_33
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
+        x: 704
+        y: 129
         width: 64
         height: 64
       alignment: 0
@@ -775,60 +830,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138cb214177d2431fb22fe320bf04f1f
-      internalID: 1683828855
+      spriteID: c61cb06c64f7c41398b17a8833c55e17
+      internalID: -274282100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_32
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5d56d3f26ac142dd9ee07ab48c263c6
-      internalID: 1876045040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_33
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab319ff2ec93144a0a76a72530e35632
-      internalID: 75134015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: circular window_34
+      name: broken-jail-bars_34
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -838,18 +851,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b8b0100674347da9e693180709bfcb
-      internalID: 1436815357
+      spriteID: 5c99770277a1a4caf916d09e6b31be5a
+      internalID: -1944320165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_35
+      name: broken-jail-bars_35
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -859,18 +872,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceb79ab1d0dbd446b945861f19f623d9
-      internalID: 1113712511
+      spriteID: 8ca56a4fa3e9c4ddda3b819608ef0b53
+      internalID: 107499163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_36
+      name: broken-jail-bars_36
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -880,18 +893,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea0fcd54c5d7f452993a093d26f179f3
-      internalID: 208453181
+      spriteID: e3f5212254da54b0eb84addf4ee609f8
+      internalID: 1875914113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_37
+      name: broken-jail-bars_37
       rect:
         serializedVersion: 2
         x: 192
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -901,18 +914,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02b2348c22e784f10867ecc375efc6aa
-      internalID: -1816661243
+      spriteID: fb992dbb416b1457bb4e63cba1c037a5
+      internalID: 269209818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_38
+      name: broken-jail-bars_38
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -922,18 +935,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d6265ec7f5cf40d08fe52a216645541
-      internalID: 445850374
+      spriteID: 96e1a0cffad894406a821355033cb9be
+      internalID: 2141970612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_39
+      name: broken-jail-bars_39
       rect:
         serializedVersion: 2
         x: 320
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -943,18 +956,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78132bfa57dd44d478317ea384608c3a
-      internalID: -1549431979
+      spriteID: 8afbdd47ba0064b9ab26e32118443cc1
+      internalID: -1689269288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_40
+      name: broken-jail-bars_40
       rect:
         serializedVersion: 2
         x: 384
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -964,18 +977,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd0e41c04f3d24f57a4344017ec5d252
-      internalID: 1795993679
+      spriteID: 1e0c9389f38e148b38fa6861230e08a2
+      internalID: 537882023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_41
+      name: broken-jail-bars_41
       rect:
         serializedVersion: 2
         x: 448
-        y: 64
+        y: 65
         width: 64
         height: 64
       alignment: 0
@@ -985,18 +998,123 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bb1beabf16c34f4e9a9c998467b4549
-      internalID: 1739392112
+      spriteID: 8a5deb42029084426b108850ebd316c9
+      internalID: 247455896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_42
+      name: broken-jail-bars_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 65
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b30eb37537a64410979c1d6424b0438
+      internalID: 495445244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 65
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352e7a02cfdd74bae91617aa28342c7a
+      internalID: 313932191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 65
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34685ecc4d12a4d1aa7fb8ce585a5c8d
+      internalID: 14015644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_45
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 65
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd76db50e28044aa861aad7d1906c97
+      internalID: 53434334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73afbf29c036142bea485ffbd3497e2b
+      internalID: 976089740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_47
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1006,18 +1124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fae237f75e44cd89e39b22793dfca6
-      internalID: -950624774
+      spriteID: 06329ccc7326d4716a51a07be7cd4073
+      internalID: 1861575831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_43
+      name: broken-jail-bars_48
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1027,18 +1145,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d9b261ceb5474dc8a00a62e51fa2a5a
-      internalID: 60914736
+      spriteID: 10680b7265fe34322b5c4f6972e91b14
+      internalID: 1130864110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_44
+      name: broken-jail-bars_49
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1048,18 +1166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0fa2272fd5b4fac9d6a42eeb656e41
-      internalID: -1292257513
+      spriteID: 45e370299d49c4736adf0efba421cf71
+      internalID: 1116758425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_45
+      name: broken-jail-bars_50
       rect:
         serializedVersion: 2
         x: 256
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1069,18 +1187,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f12cd82eed084c8fb480478989b8999
-      internalID: -1638547313
+      spriteID: a27c12c53d8f7458bbb5a30313b2964a
+      internalID: -1921132417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_46
+      name: broken-jail-bars_51
       rect:
         serializedVersion: 2
         x: 320
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1090,18 +1208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6665dbc3dcb3d498c8af13a441cb4069
-      internalID: -465577829
+      spriteID: e3cd12ae523664278bb70e1ef9300d6b
+      internalID: -1812766836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: circular window_47
+      name: broken-jail-bars_52
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
+        y: 1
         width: 64
         height: 64
       alignment: 0
@@ -1111,8 +1229,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b181feead9f4b0b9f7ffbe217a00af
-      internalID: 260318637
+      spriteID: 5c4a7a6f5fa3c467e84d6feb22edc228
+      internalID: 364048448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_53
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4445663b38df64cfeb0d9f30c2495f0d
+      internalID: -799277155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6251315de28340b185697555beb19f6
+      internalID: -1794522844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_55
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff579e51d40a48bebd54ceb9653074c
+      internalID: 976496695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b9399ca329d4aebbca3c6231c43f0b
+      internalID: -1518753414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken-jail-bars_57
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4d14cc899d84499ac0b3000d14ea23
+      internalID: -881242326
       vertices: []
       indices: 
       edges: []
@@ -1128,54 +1351,64 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      circular window_0: -4778847
-      circular window_1: -762930092
-      circular window_10: 578127103
-      circular window_11: -765513008
-      circular window_12: -1573734108
-      circular window_13: -423318842
-      circular window_14: -861850092
-      circular window_15: 243703348
-      circular window_16: 21210004
-      circular window_17: 1111061773
-      circular window_18: 1333133344
-      circular window_19: 1281669068
-      circular window_2: 383100964
-      circular window_20: 1000143576
-      circular window_21: 1507650548
-      circular window_22: -1494868517
-      circular window_23: 72278449
-      circular window_24: -468057870
-      circular window_25: -418380163
-      circular window_26: 1199612969
-      circular window_27: -1219006814
-      circular window_28: 607631227
-      circular window_29: -975714864
-      circular window_3: 1682450851
-      circular window_30: -1590287629
-      circular window_31: 1683828855
-      circular window_32: 1876045040
-      circular window_33: 75134015
-      circular window_34: 1436815357
-      circular window_35: 1113712511
-      circular window_36: 208453181
-      circular window_37: -1816661243
-      circular window_38: 445850374
-      circular window_39: -1549431979
-      circular window_4: -2097643081
-      circular window_40: 1795993679
-      circular window_41: 1739392112
-      circular window_42: -950624774
-      circular window_43: 60914736
-      circular window_44: -1292257513
-      circular window_45: -1638547313
-      circular window_46: -465577829
-      circular window_47: 260318637
-      circular window_5: -1701015756
-      circular window_6: 1221276564
-      circular window_7: -1673568855
-      circular window_8: 1585972289
-      circular window_9: 2131800365
+      broken-jail-bars_0: -1820608831
+      broken-jail-bars_1: 1680932722
+      broken-jail-bars_10: 373268574
+      broken-jail-bars_11: 701343513
+      broken-jail-bars_12: -1319494935
+      broken-jail-bars_13: 933218344
+      broken-jail-bars_14: -582966118
+      broken-jail-bars_15: 1280961586
+      broken-jail-bars_16: 626100595
+      broken-jail-bars_17: -1086322975
+      broken-jail-bars_18: 1371787030
+      broken-jail-bars_19: 1133665075
+      broken-jail-bars_2: 1186624789
+      broken-jail-bars_20: -105581160
+      broken-jail-bars_21: 1782670943
+      broken-jail-bars_22: 1913401285
+      broken-jail-bars_23: 1646765354
+      broken-jail-bars_24: 570352068
+      broken-jail-bars_25: -326408821
+      broken-jail-bars_26: -306154218
+      broken-jail-bars_27: 1195841965
+      broken-jail-bars_28: -652994884
+      broken-jail-bars_29: 343966713
+      broken-jail-bars_3: -1959067779
+      broken-jail-bars_30: 2078286366
+      broken-jail-bars_31: -590551336
+      broken-jail-bars_32: -1082884629
+      broken-jail-bars_33: -274282100
+      broken-jail-bars_34: -1944320165
+      broken-jail-bars_35: 107499163
+      broken-jail-bars_36: 1875914113
+      broken-jail-bars_37: 269209818
+      broken-jail-bars_38: 2141970612
+      broken-jail-bars_39: -1689269288
+      broken-jail-bars_4: -1809862923
+      broken-jail-bars_40: 537882023
+      broken-jail-bars_41: 247455896
+      broken-jail-bars_42: 495445244
+      broken-jail-bars_43: 313932191
+      broken-jail-bars_44: 14015644
+      broken-jail-bars_45: 53434334
+      broken-jail-bars_46: 976089740
+      broken-jail-bars_47: 1861575831
+      broken-jail-bars_48: 1130864110
+      broken-jail-bars_49: 1116758425
+      broken-jail-bars_5: 1858931693
+      broken-jail-bars_50: -1921132417
+      broken-jail-bars_51: -1812766836
+      broken-jail-bars_52: 364048448
+      broken-jail-bars_53: -799277155
+      broken-jail-bars_54: -1794522844
+      broken-jail-bars_55: 976496695
+      broken-jail-bars_56: -1518753414
+      broken-jail-bars_57: -881242326
+      broken-jail-bars_6: -1611940862
+      broken-jail-bars_7: 1891795028
+      broken-jail-bars_8: -1802330383
+      broken-jail-bars_9: 169529461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -29,7 +29,7 @@ public class BarSlider : MonoBehaviour
 
     public void SwitchAnim()
     {
-        if (Input.GetKeyDown("z"))
+        if (Input.GetKeyDown("z") || Input.GetButtonDown("Switch"))
         {
             if (Time.time < nextSwitch)
             {
