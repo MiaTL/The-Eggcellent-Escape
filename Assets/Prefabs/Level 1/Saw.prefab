@@ -102,7 +102,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  speed: 35
+  speed: 30
 --- !u!114 &994158934730131592
 MonoBehaviour:
   m_ObjectHideFlags: 0
