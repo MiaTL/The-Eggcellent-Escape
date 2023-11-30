@@ -27,8 +27,8 @@ namespace Bundos.WaterSystem
         public float springConstant = 0.05f;
         public float springDamping = 0.025f;
 
-        [Header("Particles")]
-        public GameObject splashParticle;
+        //[Header("Particles")]
+       //public GameObject splashParticle;
 
         [HideInInspector]
         Spring[] springs;
@@ -189,7 +189,7 @@ namespace Bundos.WaterSystem
 
         private void Ripple(Vector3 contactPoint, bool sink)
         {
-            Instantiate(splashParticle, contactPoint, Quaternion.identity);
+            //Instantiate(splashParticle, contactPoint, Quaternion.identity);
 
             Vector3 localContactPoint = transform.InverseTransformPoint(contactPoint);
 
