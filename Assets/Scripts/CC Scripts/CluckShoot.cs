@@ -8,7 +8,11 @@ public class CluckShoot : MonoBehaviour
     public GameObject laser;
     public Transform laserPos;
     public GameObject chickPre;
+
+
     public GameObject healthBar;
+    public GameObject healthOutline;
+    public GameObject ccText;
 
     private float timer;
     private float chickTimer;
@@ -38,6 +42,8 @@ public class CluckShoot : MonoBehaviour
         if (distance < 80)
         {
             healthBar.SetActive(true);
+            healthOutline.SetActive(true);
+            ccText.SetActive(true);
             timer += Time.deltaTime;
             chickTimer += Time.deltaTime;
 
