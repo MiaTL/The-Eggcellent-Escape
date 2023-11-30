@@ -135,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8315048, y: 0.7006593}
+  m_Size: {x: 4.2, y: 3.74}
   m_EdgeRadius: 0
 --- !u!114 &186750185963057946
 MonoBehaviour:
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 1
-  contactDamage: 1
+  maxHealth: 2
+  contactDamage: 2
   player: {fileID: 0}
   chickenPrefab: {fileID: 6597921606524620578, guid: 625e9b2ee8aa3d94b8b86080ec4776fb, type: 3}
   deathSoundEffect: {fileID: 8807498418154595245}

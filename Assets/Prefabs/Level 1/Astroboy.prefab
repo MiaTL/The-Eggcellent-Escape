@@ -317,7 +317,7 @@ MonoBehaviour:
   yellowBar: {fileID: 0}
   redBar: {fileID: 0}
   shieldBar: {fileID: 0}
-  fireRate: 2
+  fireRate: 0.75
   bulletDamage: 1
   bulletSpeed: 45
   bulletShootPosition: {fileID: 4079903109026665281}
