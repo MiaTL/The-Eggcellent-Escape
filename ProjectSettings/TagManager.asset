@@ -40,7 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Fluids
   - Foreground
   - Ground
   - Terrain
@@ -60,6 +60,9 @@ TagManager:
     locked: 0
   - name: Oil
     uniqueID: 2914596291
+    locked: 0
+  - name: Fluids
+    uniqueID: 3879108179
     locked: 0
   - name: Terrain
     uniqueID: 1333993859

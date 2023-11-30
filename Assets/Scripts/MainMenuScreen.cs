@@ -10,6 +10,7 @@ public class MainMenuScreen : MonoBehaviour
     public GameObject settingsMenu;
     public float soundDuration = 3.0f;
 
+
     public void StartGame()
     {
         playButton.Play();
